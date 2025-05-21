@@ -58,7 +58,7 @@ public class BookLoanServiceImpl implements BookLoanService {
             throw new RuntimeException("Book is not available for borrowing");
         }
 
-        // Create a new loan
+        // Create a new Book borrow
         BookLoan bookLoan = new BookLoan();
         UUID uuid = UUID.randomUUID();
         bookLoan.setId(uuid.getMostSignificantBits());
@@ -106,7 +106,7 @@ public class BookLoanServiceImpl implements BookLoanService {
         bookLoan.setReturned(true);
         bookLoan.setReturnDate(LocalDateTime.now());
 
-        // Update book availability
+
         book.setAvailable(true);
 
         // Save both entities
