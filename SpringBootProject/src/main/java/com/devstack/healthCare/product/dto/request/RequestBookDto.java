@@ -9,7 +9,7 @@ import lombok.Setter;
 /*@AllArgsConstructor
 @NoArgsConstructor
 @ToString*/
-@Data /*to oya 3ma wenuwata*/
+@Data /*to replace above three */
 public class RequestBookDto {
     private String isbn;
     private String title;

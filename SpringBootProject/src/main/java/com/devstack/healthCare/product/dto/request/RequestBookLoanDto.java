@@ -6,10 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-/*@AllArgsConstructor
-@NoArgsConstructor
-@ToString*/
-@Data /*to oya 3ma wenuwata*/
+@Data
 public class RequestBookLoanDto {
     private long bookId;
     private long borrowerId;
