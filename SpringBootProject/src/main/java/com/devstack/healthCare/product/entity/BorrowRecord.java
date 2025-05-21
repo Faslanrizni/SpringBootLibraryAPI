@@ -17,7 +17,6 @@ public class BorrowRecord {
     @Id
     private long id;
 
-    // Fix: Make sure to use your own Book entity, not java.awt.print.Book
     @ManyToOne
     @JoinColumn(name = "book_id")
     private com.devstack.healthCare.product.entity.Book book;

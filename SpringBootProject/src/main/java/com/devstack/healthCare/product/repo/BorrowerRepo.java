@@ -21,6 +21,3 @@ public interface BorrowerRepo extends JpaRepository<Borrower,Long> {/*type and i
     @Query(value = "SELECT COUNT(*) FROM borrower WHERE name LIKE ?1 OR address LIKE ?1", nativeQuery = true)
     public Long countBorrowers(String searchText);
 }
-/*
-* DoctorRepo need to works with entity Doctor
-* */
