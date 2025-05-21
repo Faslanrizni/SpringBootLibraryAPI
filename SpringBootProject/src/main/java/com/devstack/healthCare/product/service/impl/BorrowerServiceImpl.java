@@ -39,6 +39,12 @@ public class BorrowerServiceImpl implements BorrowerService {
         // Use the mapper instead of direct construction
         Borrower borrower = borrowerMapper.toBorrower(dto);
         borrower.setId(docId);
+
+        // Or set them explicitly here to be safe
+        if (borrower.getName() == null) borrower.setName(dto.getName());
+        if (borrower.getAddress() == null) borrower.setAddress(dto.getAddress());
+        if (borrower.getContact() == null) borrower.setContact(dto.getContact());
+
         borrowerRepo.save(borrower);
     }
 

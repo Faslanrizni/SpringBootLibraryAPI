@@ -44,6 +44,9 @@ public class BookServiceImpl implements BookService {
         Book book = bookMapper.toBook(dto);
         book.setId(bookId);
         book.setAvailable(true);
+        if (book.getIsbn() == null) book.setIsbn(dto.getIsbn());
+        if (book.getAuthor() == null) book.setAuthor(dto.getAuthor());
+        if (book.getTitle() == null) book.setTitle(dto.getTitle());
         System.out.println("Book to save: " + book);
         bookRepo.save(book);
     }

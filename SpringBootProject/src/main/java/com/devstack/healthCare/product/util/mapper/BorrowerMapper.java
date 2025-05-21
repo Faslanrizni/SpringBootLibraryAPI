@@ -12,6 +12,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface BorrowerMapper {
     ResponseBorrowerDto toResponseBorrowerDto(Borrower borrower); /*entity => dto*/
+
     Borrower toBorrower(RequestBorrowerDto dto);/*dto => entity*/
     List<ResponseBorrowerDto> toResponseBorrowerDtoList(List<Borrower> list);
 }
